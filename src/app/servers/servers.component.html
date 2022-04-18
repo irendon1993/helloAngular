@@ -1,4 +1,10 @@
 <!-- Using [] tells angular we want to use property binding -->
+<label>Server Name</label>
+<input
+  type="text"
+  class="form-control"
+  (input)="onUpdateServerName($event)">
+  <p>{{serverName}}</p>
 <button
   class="btn btn-primary"
   [disabled]="!allowNewServer"
