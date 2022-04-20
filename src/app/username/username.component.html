@@ -1,8 +1,20 @@
-<div>
-  <label>Username:</label>
+<label>Username:</label>
   <input 
-  type="text"
-  [(ngModel)]="username"
-  >
-  <h1>New username is {{username}}</h1>
-</div>>
+    type="text"
+    class="form-control"
+    [(ngModel)]="username">
+    {{username}}
+<button
+  class="btn btn-primary"
+  [disabled]="username ==='' "
+  (click)="updateUsername()">
+  Change Username
+</button>
+<button
+  class="btn btn-primary"
+  [disabled]="username ==='' "
+  (click)="username = ''">
+  Reset Username
+</button>
+<br>
+<p>{{ currentUser }}</p>

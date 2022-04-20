@@ -1,20 +1,19 @@
 import { Component, OnInit} from '@angular/core'
 
 @Component({
-  selector: 'username',
+  selector: 'app-username',
   templateUrl: './username.component.html'
 })
 
 export class UsernameComponent implements OnInit {
-  username = '';
+  currentUser = "Their is no current username"
+  username = 'Isaac';
+ 
+ ngOnInit() {
+ }
 
-  constructor() {
-    this.username = 'Tyler';
-  }
-
-  ngOnInit() {}
-
-  onUpdateUsername(event: any)  {
-    this.username = (<HTMLInputElement>event.target).value;
+updateUsername()  {
+    this.currentUser = "New username is " + this.username;
+    console.log(this.username.length);
   }
 }
