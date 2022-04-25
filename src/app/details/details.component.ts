@@ -22,7 +22,8 @@ export class DetailsComponent {
     //   console.log(this.logArray)
     // }
     this.displayInfo= !this.displayInfo;
-    this.logArray.push(this.logArray.length + 1)
+    // this.logArray.push(this.logArray.length + 1)
+    this.logArray.push(new Date());
    
   }
 }
