@@ -1,2 +1,5 @@
 <!-- Can string interpolate as long as final result is a string or can be converted to a string-->
-<p [ngStyle]="{backgroundColor: getColor()}">{{'Server'}} with ID {{serverId}} is {{getServerStatus()}} </p>
+<p
+ [ngStyle]="{backgroundColor: getColor()}"
+ [ngClass]="{online: serverStatus === 'online'}">
+ {{'Server'}} with ID {{serverId}} is {{getServerStatus()}} </p>
